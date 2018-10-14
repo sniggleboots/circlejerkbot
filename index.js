@@ -32,8 +32,8 @@ bot.on("message", async message => {
                 console.log(`cooldown changed to ` + newCooldown + ` by ${message.author.username}.`);
                 CooldownInS = newCooldown;
                 message.channel.send("Cooldown set to " + newCooldown + "seconds.");
-	    */
             }
+	    */
         }
     }
 
