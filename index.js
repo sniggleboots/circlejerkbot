@@ -6,6 +6,8 @@ setInterval(function() {
     http.get("http://circlejerkbot.herokuapp.com");
 }, 300000); // every 5 minutes (300000)
 
+var thisAlgorithmBecomingSkynetCost = 99999999;
+
 const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
 var CooldownInS = 5;
