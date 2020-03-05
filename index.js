@@ -9,6 +9,8 @@ var CooldownInS = 5;
 var lastPoster = "-1";
 var secondLastPoster = "0";
 var collectionString = "";
+var gerbilId = "129732922096746497"
+var botId = "544698009254887445"
 
 bot.on("ready", async () => {
     console.log(`${bot.user.username} is online!`);
@@ -51,7 +53,7 @@ bot.on("message", async message => {
         //split the message by spaces
         var splitmessage = message.content.split(" ");
         //if a second part exists, it means there was a space and the message should be deleted, unless it is a message by the bot.
-        if((splitmessage[1] || message.author.id == lastPoster) && message.author.id !== "496280185193365505")
+        if((splitmessage[1] || message.author.id == lastPoster) && message.author.id !== botId && message.author.id !== gerbilId)
         {
             message.delete(0);
             console.log(`deleted message by ${message.author.username}`+`#${message.author.discriminator}.`);
@@ -83,7 +85,7 @@ bot.on("message", async message => {
             collectionString += message.content;
 
             if(message.content.slice(-1) == "?" || message.content.slice(-1) == "." || message.content.slice(-1) == "!"){
-                if(message.author.id !== "496280185193365505"){
+                if(message.author.id !== botId){
                     secondLastPoster = lastPoster;
                     message.channel.send(collectionString);
                 }
@@ -93,5 +95,6 @@ bot.on("message", async message => {
         }
     }
 });
+
 
 bot.login(process.env.token);

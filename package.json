@@ -9,6 +9,14 @@
   "author": "Sniggleboots",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.4.2"
-  }
+    "discord.js": "^11.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yontoo/circlejerkbot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yontoo/circlejerkbot/issues"
+  },
+  "homepage": "https://github.com/yontoo/circlejerkbot#readme"
 }
