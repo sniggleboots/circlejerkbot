@@ -33,17 +33,6 @@ bot.on("message", async message => {
             console.log(`bot halted by ${message.author.username}.`);
             message.channel.send("Shutting down.")
             bot.destroy();
-        }else
-        {
-            /*
-	    let newCooldown = parseInt(message.content,10);
-            if(newCooldown >= 1 && newCooldown < 3600)
-            {
-                console.log(`cooldown changed to ` + newCooldown + ` by ${message.author.username}.`);
-                CooldownInS = newCooldown;
-                message.channel.send("Cooldown set to " + newCooldown + "seconds.");
-            }
-	    */
         }
     }
 
