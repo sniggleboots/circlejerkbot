@@ -4,11 +4,21 @@
   "description": "Bot for circlejerkin on the JOKG discord server",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "test": "node index.js",
+    "start": "node index.js"
   },
   "author": "Sniggleboots",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.4.2"
-  }
+    "discord.js": "^11.6.1",
+    "pg": "^7.18.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yontoo/circlejerkbot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yontoo/circlejerkbot/issues"
+  },
+  "homepage": "https://github.com/yontoo/circlejerkbot#readme"
 }
