@@ -73,8 +73,8 @@ bot.on("message", async message => {
                         }
                     j--
                 }
-                
-                message.delete(3)
+
+                message.delete(3000)
                 .then(msg => console.log(`Deleted message from ${msg.author.username}`))
                 .catch(console.error)
         }
