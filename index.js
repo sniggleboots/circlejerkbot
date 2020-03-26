@@ -16,7 +16,7 @@ bot.on("ready", async () => {
     console.log(`${bot.user.username} is online!`)
     bot.user.setActivity("#circlejerk")
     channel = bot.channels.get(channelId)
-    channel.send("Ready")
+    channel.send("Bot Ready")
 })
 
 
@@ -40,7 +40,11 @@ bot.on("message", async message => {
 
     if(message.channel.name === "circlejerk")
     {
-        if(message.content === "Ready" && message.author.id === botId)
+        /*
+            If most recent message sent is "Bot Ready" and is sent by the bot, load previous messages and then 
+            delete the "Bot Ready" message.
+        */
+        if(message.content === "Bot Ready" && message.author.id === botId)
         {
                 messages = await message.channel.fetchMessages()
                 messages.array()
@@ -69,6 +73,10 @@ bot.on("message", async message => {
                         }
                     j--
                 }
+                
+                message.delete(3)
+                .then(msg => console.log(`Deleted message from ${msg.author.username}`))
+                .catch(console.error)
         }
         else
         {
