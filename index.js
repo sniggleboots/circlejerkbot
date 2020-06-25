@@ -98,6 +98,11 @@ bot.on("message", async message => {
                     case "!":
                     case ".":
                     case "?":
+                        if(message.content.length > 1)
+                        {
+                            collectionString += " "
+                        }
+                        
                         collectionString += message.content
 
                         if(message.author.id !== botId){
