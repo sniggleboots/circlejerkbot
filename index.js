@@ -34,11 +34,11 @@ bot.on("message", async message => {
     }
 
     /*
-    1st Check if message in channel named circlejerk
+    1st Check if message in channel with correct ID
     2nd Check if message is double post or more than one word and delete, else post it
     */
 
-    if(message.channel.name === "circlejerk")
+    if(message.channel.id === channelId)
     {
         /*
             If most recent message sent is "Bot Ready" and is sent by the bot, load previous messages and then 
